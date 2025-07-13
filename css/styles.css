@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+	/* suppress browser defaults and select alt box model */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*sets alt box model*/
+	font-family: "Poppins", sans-serif, Tahoma;
+	/* set variables for colors */
+	--bg-primary: #fff;
+	--bg-secondary: #ffeed7;
+	--font-color-primary: #26413c;
+	--font-color-secondary: #030812;
+	--backup-color: #4baeff;
+	--input-border: #e5e7eb;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	flex: 3 0%;
+	align-items: center;
+	background: url("../assets/image/vecteezy_beautiful-sunrise-landscape-scenery-of-mullaghmore-mountain_53780596.jpg")
+		no-repeat fixed left center;
+	height: 100%;
+}
+
+.left .logo-container {
+	background: rgba(1, 1, 1, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 35%;
+	padding: 10px;
+}
+
+.left .attribution {
+	margin: auto 0px 0px 0px;
+	color: #fff;
+	width: 100%;
+	background: #2b1500;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.left .attribution a {
+	color: #fff;
+}
+
+.left .attribution a:hover {
+	color: #0051ff;
+}
+
+.logo {
+	width: clamp(20px, 150px, 200px);
+	height: clamp(20px, 150px, 200px);
+	border-radius: 50%;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 6 0%;
+	height: 100vh;
+}
+
+.right .description-container {
+	font-size: 1.2rem;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-items: start;
+	justify-content: end;
+	padding: 50px;
+	gap: 2em;
+	background: #f3f3f3;
+}
+
+.right .footer-container {
+	display: flex;
+	flex-grow: 2;
+	padding: 80px 50px;
+	background: #f3f3f3;
+	position: relative;
+	z-index: 0;
+}
+
+.right .footer-container a {
+	text-decoration: none;
+	color: #9e4c00;
+}
+
+.right .form-container {
+	padding: 10px 50px;
+	box-shadow: 0px 1px 5px #7c7c7c;
+	position: relative;
+	z-index: 1;
+}
+
+.right .form-container p {
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+
+.right .form-container form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(7, 1fr);
+	width: clamp(100px, 70%, 650cdpx);
+}
+
+.signup-form label {
+	display: flex;
+	align-items: end;
+	width: clamp(100px, 250px, 100%);
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	color: #525252;
+	font-weight: 600;
+}
+
+.signup-form input {
+	padding: 0px 10px;
+	height: clamp(15px, 30px, 30px);
+	width: clamp(100px, 250px, 100%);
+	font-size: 0.9rem;
+	border-radius: 3px;
+	border: var(--input-border) 1px solid;
+}
+
+.signup-form input:focus {
+	border: #0051ff 1px solid;
+	box-shadow: 1px 1px 3px #696969;
+	outline: none;
+}
+
+.signup-form input:user-invalid {
+	border: #ff0000 1px solid;
+	outline: none;
+}
+
+.signup-form label:nth-of-type(1) {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.signup-form input:nth-of-type(1) {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+.signup-form label:nth-of-type(3) {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+.signup-form input:nth-of-type(3) {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+
+.signup-form label:nth-of-type(5) {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 5;
+	grid-row-end: 6;
+}
+.signup-form input:nth-of-type(5) {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 6;
+	grid-row-end: 7;
+}
+
+.signup-form button {
+	position: relative;
+	top: 70px;
+	width: 200px;
+	padding: 8px 10px;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	background: #9e4c00;
+}
+
+span {
+	font-style: italic;
+}
